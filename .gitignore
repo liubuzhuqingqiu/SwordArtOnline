@@ -3,8 +3,10 @@ DerivedDataCache
 Intermediate
 Saved
 Build
-Content
 .idea
+Content/*
+!Content/Blueprints/
+!Content/Maps/
 
 .vscode
 .vs

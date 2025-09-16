@@ -1,0 +1,18 @@
+------------------------------------------项目创建------------------------------------------
+第一课：一些编译器设置
+
+第二课：使用git进行版本管理
+
+第三课：创建第一个C++类，并且使用debugging模式打开虚幻
+
+第四课：整理代码结构，创建playercharacter以及enemycharacter继承basecharacter
+
+第五课：
+	1.TObjectPtr的：
+	UE4使用USkeletalMeshComponent*；UE5官方推荐使用 TObjectPtr<T> 来替代裸指针 
+	本质上还是一个指向 UObject 的指针，性能上几乎没有区别。但是 TObjectPtr 会显式告诉编译器/工具：这是一个
+UObject指针，从而增强了GC安全性。
+			
+	2.虚幻FName,TEXT()宏
+	在UE里FName有构造函数可以接受const TCHAR*；而 TEXT("WeaponHandSocket")宏会把它转成const TCHAR*类
+型完全匹配。但是直接用“”就是C++类型的string，会有隐式转换，但跨平台可能不兼容

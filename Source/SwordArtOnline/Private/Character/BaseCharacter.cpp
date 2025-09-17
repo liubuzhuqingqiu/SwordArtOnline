@@ -13,5 +13,5 @@ ABaseCharacter::ABaseCharacter()
 
 void ABaseCharacter::BeginPlay()
 {
-	Super::BeginPlay();
+	Super::BeginPlay(); 
 }

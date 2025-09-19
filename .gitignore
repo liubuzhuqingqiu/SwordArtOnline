@@ -4,9 +4,9 @@ Intermediate
 Saved
 Build
 .idea
-Content/*
-!Content/Blueprints/
-!Content/Maps/
+Content/Assets/
+Content/Collections/
+Content/Developers/
 
 .vscode
 .vs

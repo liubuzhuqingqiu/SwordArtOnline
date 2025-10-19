@@ -6,9 +6,9 @@ ABaseCharacter::ABaseCharacter()
 {
 	PrimaryActorTick.bCanEverTick = false;
 
-	WeaponComponent = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Weapon"));
-	WeaponComponent->SetupAttachment(GetMesh(),TEXT("WeaponHandSocket"));
-	WeaponComponent->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	WeaponMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Weapon"));
+	WeaponMesh->SetupAttachment(GetMesh(),TEXT("WeaponHandSocket"));
+	WeaponMesh->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 }
 
 void ABaseCharacter::BeginPlay()

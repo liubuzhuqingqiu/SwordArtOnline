@@ -1,4 +1,4 @@
-// Copyright  a SAO dreamer
+// Copyright a SAO dreamer
 
 #pragma once
 

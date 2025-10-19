@@ -9,6 +9,7 @@
 struct FInputActionValue;
 class UInputAction;
 class UInputMappingContext;
+class IEnemyInterface;
 /**
  * 
  */
@@ -21,11 +22,18 @@ public:
 protected:
 	virtual void BeginPlay() override;
 	virtual void SetupInputComponent() override;
+	void PlayerTick(float DeltaTime) override;
 private:
 	UPROPERTY(EditAnywhere,Category=Input)
 	TObjectPtr<UInputMappingContext> PlayerContext;
 	UPROPERTY(EditAnywhere,Category=Input)
 	TObjectPtr<UInputAction> MoveAction;
 
+	//鼠标高亮显示
+	IEnemyInterface* LastEnemy;
+	IEnemyInterface* CurrentEnemy;
+	void CuroseTrace();
+	//按键回调函数
 	void Move(const FInputActionValue& InputActionValue);
+	
 };

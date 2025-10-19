@@ -18,5 +18,5 @@ protected:
 	virtual void BeginPlay() override;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = Combat)
-	TObjectPtr<USkeletalMeshComponent> WeaponComponent;
+	TObjectPtr<USkeletalMeshComponent> WeaponMesh;
 };
